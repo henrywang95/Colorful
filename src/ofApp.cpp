@@ -181,7 +181,7 @@ void ofApp::draw() {
     
     // Paint the canvas on the application window
 //    ofBackground(255);
-    canvas.draw(0, 0,ofGetWidth(), ofGetHeight());
+    canvas.draw(ofGetWidth(), 0, 0, ofGetHeight());
     if (dubugMode){
         
         ofFloatPixels rawDepthPix = kinect.getRawDepthPixels();
