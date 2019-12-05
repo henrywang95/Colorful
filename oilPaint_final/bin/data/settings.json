@@ -1,0 +1,6 @@
+{
+    "Depth_Threshold": {
+        "Far_Threshold": "0.02",
+        "Near_Threshold": "0.015"
+    }
+}
