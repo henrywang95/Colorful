@@ -6,6 +6,8 @@
 #include "ofxCv.h"
 #include "ofxKinect.h"
 
+#include "ofxOsc.h"
+
 #include "ofxGui.h"
 
 class ofApp: public ofBaseApp {
@@ -13,6 +15,9 @@ public:
     void setup();
     void update();
     void draw();
+    
+    ofxOscSender sender;
+    ofxOscReceiver receiver;
     
     void keyPressed(int key);
     void keyReleased(int key);
@@ -26,6 +31,7 @@ public:
     
     void addBrush(int x, int y, int z);
     void dragBrush(int x, int y);
+    void stopBrush();
     
     ofxKinect kinect;
     

@@ -8,6 +8,8 @@ void ofApp::setup() {
     kinect.init();
     kinect.open();
     
+    sender.setup("localhost", 7000);
+    
     // Setup the parameters.
     nearThreshold.set("Near Threshold", 0.01f, 0.0f, 0.1f);
     farThreshold.set("Far Threshold", 0.02f, 0.0f, 0.1f);
@@ -161,7 +163,14 @@ void ofApp::update() {
         
     }
     else {
-        hasBrush = false;
+        if(hasBrush == true) {
+            hasBrush = false;
+            stopBrush();
+        }
+        else {
+            hasBrush = false;
+        }
+        
     }
 }
 
@@ -181,7 +190,7 @@ void ofApp::draw() {
     
     // Paint the canvas on the application window
 //    ofBackground(255);
-    canvas.draw(ofGetWidth(), 0, 0, ofGetHeight());
+    canvas.draw(0, 0, ofGetWidth(), ofGetHeight());
     if (dubugMode){
         
         ofFloatPixels rawDepthPix = kinect.getRawDepthPixels();
@@ -245,7 +254,7 @@ void ofApp::mouseMoved(int x, int y) {
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button) {
-    dragBrush(x,y);
+    dragBrush(ofGetWidth() - x,y);
 }
 
 void ofApp::dragBrush(int x, int y){
@@ -254,18 +263,33 @@ void ofApp::dragBrush(int x, int y){
 
     if (glm::distance(mousePos, lastAddedPoint) > 2.5) {
         // Add the point to the path
-        cursorPath.curveTo(mousePos.x, mousePos.y);
+        cursorPath.curveTo(ofGetWidth() - mousePos.x, mousePos.y);
         //cursorPath.curveTo(mouseX, mouseY);
         
         // Save the last added point position
         lastAddedPoint = mousePos;
     }
+    ofxOscBundle b;
+                
+    ofxOscMessage m;
+    m.setAddress("/y");
+    m.addIntArg(y);
+//    sender.sendMessage(m);
+    b.addMessage(m);
+    
+    m.clear();
+    m.setAddress("/x");
+    m.addIntArg(x);
+    b.addMessage(m);
+//    m.clear();
+    
+    sender.sendBundle(b);
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button) {
     // Create a new brush
-    addBrush(x, y, 0);
+    addBrush(ofGetWidth() - x, y, 0);
 }
 
 void ofApp::addBrush(int x, int y, int z)
@@ -298,12 +322,45 @@ void ofApp::addBrush(int x, int y, int z)
     
     // Reset the next path length variable
     nextPathLength = 0;
+    ofxOscBundle b;
+            
+    ofxOscMessage m;
+    m.setAddress("/y");
+    m.addIntArg(y);
+//    sender.sendMessage(m);
+    b.addMessage(m);
+    
+    m.clear();
+    m.setAddress("/x");
+    m.addIntArg(x);
+    b.addMessage(m);
+    
+    m.clear();
+    m.setAddress("/trigger");
+    m.addBoolArg(true);
+    b.addMessage(m);
+
+    m.clear();
+    m.setAddress("/hue");
+    m.addFloatArg(hueValue);
+    b.addMessage(m);
+    
+    sender.sendBundle(b);
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button) {
     // Finish the cursor path
     //  cursorPath.curveTo(ofGetMouseX(), ofGetMouseY());
+    stopBrush();
+}
+
+void ofApp::stopBrush() {
+    ofxOscMessage m;
+    m.setAddress("/trigger");
+    m.addBoolArg(false);
+    
+    sender.sendMessage(m);
 }
 
 //--------------------------------------------------------------

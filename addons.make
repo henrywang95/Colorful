@@ -1,5 +1,6 @@
+ofxOpenCv
 ofxCv
 ofxGui
 ofxKinect
 ofxOilPaint
-ofxOpenCv
+ofxOsc
