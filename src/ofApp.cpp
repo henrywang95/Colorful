@@ -9,6 +9,7 @@ void ofApp::setup() {
     kinect.init();
     kinect.open();
     
+//    sender.setup("localhost", 7000);
     sender.setup("localhost", 7000);
     
     mySound.load("background.wav");
@@ -233,7 +234,7 @@ void ofApp::draw() {
     
     // draw the trail:
     //ofSetColor(ofColor::white);
-    ofSetColor(255,255,255,100);
+    ofSetColor(255,255,255,60);
     ofSetLineWidth(5);
     mixTrail.draw();
     
@@ -252,6 +253,34 @@ void ofApp::keyPressed(int key) {
     {
         ofToggleFullscreen();
     }
+    if (key == 'a')
+    {
+        ofxOscMessage m;
+        m.setAddress("/x");
+        m.addFloatArg(1);
+        sender.sendMessage(m, false);
+    }
+    if (key == 's')
+    {
+        ofxOscMessage m;
+        m.setAddress("/y");
+        m.addFloatArg(1);
+        sender.sendMessage(m, false);
+    }
+    if (key == 'z')
+    {
+        ofxOscMessage m;
+        m.setAddress("/trigger");
+        m.addFloatArg(1);
+        sender.sendMessage(m, false);
+    }
+    if (key == 'x')
+    {
+        ofxOscMessage m;
+        m.setAddress("/hue");
+        m.addFloatArg(1);
+        sender.sendMessage(m, false);
+    }
 }
 
 //--------------------------------------------------------------
@@ -261,7 +290,11 @@ void ofApp::keyReleased(int key) {
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y) {
-    
+//    ofxOscMessage m;
+//    m.setAddress("/live/volume");
+////    m.addIntArg(1);
+//    m.addFloatArg(ofMap(x, 0, ofGetWidth(), 0, 1, true));
+//    sender.sendMessage(m, false);
 }
 
 //--------------------------------------------------------------
@@ -282,19 +315,19 @@ void ofApp::dragBrush(int x, int y){
         lastAddedPoint = mousePos;
     }
     ofxOscBundle b;
-                
+
     ofxOscMessage m;
-    m.setAddress("/y");
-    m.addIntArg(y);
+    m.setAddress("/x");
+    m.addFloatArg(ofMap(x, ofGetWidth(), 0, 0, 1, true));
 //    sender.sendMessage(m);
     b.addMessage(m);
-    
+
     m.clear();
-    m.setAddress("/x");
-    m.addIntArg(x);
+    m.setAddress("/y");
+    m.addFloatArg(ofMap(y, 0, ofGetHeight(), 0, 1, true));
     b.addMessage(m);
 //    m.clear();
-    
+
     sender.sendBundle(b);
 }
 
@@ -337,26 +370,26 @@ void ofApp::addBrush(int x, int y, int z)
     ofxOscBundle b;
             
     ofxOscMessage m;
-    m.setAddress("/y");
-    m.addIntArg(y);
+    m.setAddress("/x");
+    m.addFloatArg(ofMap(x, 0, ofGetWidth(), 0, 1, true));
 //    sender.sendMessage(m);
     b.addMessage(m);
-    
+
     m.clear();
-    m.setAddress("/x");
-    m.addIntArg(x);
+    m.setAddress("/y");
+    m.addFloatArg(ofMap(y, ofGetHeight(), 0, 0, 1, true));
     b.addMessage(m);
-    
+
     m.clear();
     m.setAddress("/trigger");
-    m.addBoolArg(true);
+    m.addFloatArg(1);
     b.addMessage(m);
 
     m.clear();
     m.setAddress("/hue");
     m.addFloatArg(hueValue);
     b.addMessage(m);
-    
+
     sender.sendBundle(b);
 }
 
@@ -370,8 +403,8 @@ void ofApp::mouseReleased(int x, int y, int button) {
 void ofApp::stopBrush() {
     ofxOscMessage m;
     m.setAddress("/trigger");
-    m.addBoolArg(false);
-    
+    m.addFloatArg(0);
+
     sender.sendMessage(m);
 }
 
