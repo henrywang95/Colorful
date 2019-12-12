@@ -11052,6 +11052,226 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>4B703B3BC7317D7FB98623BC</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxAbletonLiveTrack.h</string>
+				<key>path</key>
+				<string>../../addons/ofxAbletonLive/src/ofxAbletonLiveTrack.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>37EBD4240B198623C16FE58C</key>
+			<dict>
+				<key>fileRef</key>
+				<string>CD6A1081155CA1C3E382074E</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>CD6A1081155CA1C3E382074E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxAbletonLiveTrack.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxAbletonLive/src/ofxAbletonLiveTrack.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>9B3C7B0FCCC8EE17BC925424</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxAbletonLiveParameter.h</string>
+				<key>path</key>
+				<string>../../addons/ofxAbletonLive/src/ofxAbletonLiveParameter.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>EDA2ED0A20534EB4805B2D1E</key>
+			<dict>
+				<key>fileRef</key>
+				<string>384143B0CA688F22A516893B</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>384143B0CA688F22A516893B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxAbletonLiveParameter.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxAbletonLive/src/ofxAbletonLiveParameter.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>0A335019EEA2A97A133179B7</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxAbletonLiveDevice.h</string>
+				<key>path</key>
+				<string>../../addons/ofxAbletonLive/src/ofxAbletonLiveDevice.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>AF5C98A8F3F86CFE13414321</key>
+			<dict>
+				<key>fileRef</key>
+				<string>2C07D6750BA7872729AC5D89</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>2C07D6750BA7872729AC5D89</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxAbletonLiveDevice.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxAbletonLive/src/ofxAbletonLiveDevice.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>EC68EEAC9394F1532CA9B775</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxAbletonLiveClip.h</string>
+				<key>path</key>
+				<string>../../addons/ofxAbletonLive/src/ofxAbletonLiveClip.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D196A1D05BE153B7CBD1B488</key>
+			<dict>
+				<key>fileRef</key>
+				<string>E7C159F341A337403FF7DC7D</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>E7C159F341A337403FF7DC7D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxAbletonLiveClip.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxAbletonLive/src/ofxAbletonLiveClip.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>71C7208D493C9C6FB6D7C2FB</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxAbletonLive.h</string>
+				<key>path</key>
+				<string>../../addons/ofxAbletonLive/src/ofxAbletonLive.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E87BD67B460D2097E01AC90C</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>8B066C1A291C3C121B9B91F7</string>
+					<string>71C7208D493C9C6FB6D7C2FB</string>
+					<string>E7C159F341A337403FF7DC7D</string>
+					<string>EC68EEAC9394F1532CA9B775</string>
+					<string>2C07D6750BA7872729AC5D89</string>
+					<string>0A335019EEA2A97A133179B7</string>
+					<string>384143B0CA688F22A516893B</string>
+					<string>9B3C7B0FCCC8EE17BC925424</string>
+					<string>CD6A1081155CA1C3E382074E</string>
+					<string>4B703B3BC7317D7FB98623BC</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>2BD862020B7783ABB823FBFF</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>E87BD67B460D2097E01AC90C</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxAbletonLive</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>1C9D4AD092D33F2CB5D921FC</key>
+			<dict>
+				<key>fileRef</key>
+				<string>8B066C1A291C3C121B9B91F7</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>8B066C1A291C3C121B9B91F7</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxAbletonLive.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxAbletonLive/src/ofxAbletonLive.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>6948EE371B920CB800B5AC1A</key>
 			<dict>
 				<key>children</key>
@@ -11223,6 +11443,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../addons/ofxAbletonLive/src</string>
 						<string>../../addons/ofxOpenCv/libs</string>
 						<string>../../addons/ofxOpenCv/libs/opencv</string>
 						<string>../../addons/ofxOpenCv/libs/opencv/include</string>
@@ -11362,6 +11583,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../addons/ofxAbletonLive/src</string>
 						<string>../../addons/ofxOpenCv/libs</string>
 						<string>../../addons/ofxOpenCv/libs/opencv</string>
 						<string>../../addons/ofxOpenCv/libs/opencv/include</string>
@@ -11495,6 +11717,7 @@ fi
 			<dict>
 				<key>children</key>
 				<array>
+					<string>2BD862020B7783ABB823FBFF</string>
 					<string>A0B90D3B0ADB9C1716816714</string>
 					<string>6025FAF6414C2CA589764D26</string>
 					<string>480A780D8D0308AE4A368801</string>
@@ -14267,6 +14490,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../addons/ofxAbletonLive/src</string>
 						<string>../../addons/ofxOpenCv/libs</string>
 						<string>../../addons/ofxOpenCv/libs/opencv</string>
 						<string>../../addons/ofxOpenCv/libs/opencv/include</string>
@@ -14426,6 +14650,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../addons/ofxAbletonLive/src</string>
 						<string>../../addons/ofxOpenCv/libs</string>
 						<string>../../addons/ofxOpenCv/libs/opencv</string>
 						<string>../../addons/ofxOpenCv/libs/opencv/include</string>
@@ -14548,6 +14773,11 @@ fi
 				<array>
 					<string>E4B69E200A3A1BDC003C02F2</string>
 					<string>E4B69E210A3A1BDC003C02F2</string>
+					<string>1C9D4AD092D33F2CB5D921FC</string>
+					<string>D196A1D05BE153B7CBD1B488</string>
+					<string>AF5C98A8F3F86CFE13414321</string>
+					<string>EDA2ED0A20534EB4805B2D1E</string>
+					<string>37EBD4240B198623C16FE58C</string>
 					<string>4927BB9D11FF7F57D3E2B51C</string>
 					<string>7B402ED651BC0C49EF93DFF3</string>
 					<string>4658A6A134834CAE7045FA19</string>
@@ -14704,6 +14934,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../addons/ofxAbletonLive/src</string>
 						<string>../../addons/ofxOpenCv/libs</string>
 						<string>../../addons/ofxOpenCv/libs/opencv</string>
 						<string>../../addons/ofxOpenCv/libs/opencv/include</string>
@@ -14854,6 +15085,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../addons/ofxAbletonLive/src</string>
 						<string>../../addons/ofxOpenCv/libs</string>
 						<string>../../addons/ofxOpenCv/libs/opencv</string>
 						<string>../../addons/ofxOpenCv/libs/opencv/include</string>

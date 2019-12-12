@@ -1,6 +1,7 @@
 #include "ofApp.h"
 #include "ofxOilPaint.h"
 
+
 //--------------------------------------------------------------
 void ofApp::setup() {
     // Start the depth sensor.
@@ -9,6 +10,12 @@ void ofApp::setup() {
     kinect.open();
     
     sender.setup("localhost", 7000);
+    
+    mySound.load("background.wav");
+    mySound.setLoop(true);
+    mySound.play();
+    
+    live.setup();
     
     // Setup the parameters.
     nearThreshold.set("Near Threshold", 0.01f, 0.0f, 0.1f);
@@ -55,6 +62,8 @@ void ofApp::update() {
     
     // Upload pixels to image.
     thresholdImg.setFromPixels(thresholdResult);
+    
+    live.update();
     
     // Draw the result image.
     //thresholdImg.draw(640, 0);
@@ -181,7 +190,10 @@ void ofApp::draw() {
     // ofDrawBitmapStringHighlight(ofToString(distAtMouse, 3), ofGetMouseX(), ofGetMouseY());
     // Threshold the depth.
     
-    
+    if (!live.isLoaded()) {
+        ofDrawBitmapString("ofxAbletonLive has not loaded yet!", 100, 100);
+        return;
+    }
     
     //  kinect.getDepthTexture().draw(0, 0);
     

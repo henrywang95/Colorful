@@ -7,6 +7,7 @@
 #include "ofxKinect.h"
 
 #include "ofxOsc.h"
+#include "ofxAbletonLive.h"
 
 #include "ofxGui.h"
 
@@ -18,6 +19,10 @@ public:
     
     ofxOscSender sender;
     ofxOscReceiver receiver;
+    
+    ofSoundPlayer   mySound;
+    
+    ofxAbletonLive live;
     
     void keyPressed(int key);
     void keyReleased(int key);
